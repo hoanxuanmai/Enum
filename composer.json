@@ -1,9 +1,12 @@
 {
   "name": "hxm/enum",
+  "description": "Enum package",
+  "type": "php",
   "license": "MIT",
   "autoload": {
     "psr-4": {
       "HXM\\Enum\\": "src/"
     }
-  }
+  },
+  "version": "1.0.0"
 }
