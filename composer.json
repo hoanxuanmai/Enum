@@ -1,0 +1,9 @@
+{
+  "name": "hxm/enum",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "HXM\\Enum\\": "src/"
+    }
+  }
+}
