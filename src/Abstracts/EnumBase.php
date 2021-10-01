@@ -29,6 +29,20 @@ class EnumBase
     }
 
     /**
+     * @param array $dataAppend
+     * @return Collection
+     * @throws \ReflectionException
+     */
+    static function getCollection(array $dataAppend = []): Collection
+    {
+        return self::getValueWithDescriptions()->mapWithKeys(function ($dt, $k) use ($dataAppend) {
+
+            return [$k => new EnumItemBase($k, $dt, $dataAppend[$k] ?? [])];
+
+        });
+
+    }
+        /**
      * @return Collection
      * @throws \ReflectionException
      */
