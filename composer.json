@@ -18,7 +18,7 @@
   },
   "require": {
     "php": ">=7",
-    "illuminate/collection": "^7.0.0",
+    "illuminate/collection": "*",
     "illuminate/contracts": "*"
   },
   "version": "1.0.2"
