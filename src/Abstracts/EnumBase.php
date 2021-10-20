@@ -65,14 +65,13 @@ class EnumBase
 
     /**
      * @param $value
-     * @return array|string|null
+     * @param string|null $default
+     * @return string
      * @throws \ReflectionException
      */
-    public static function getDescription($value)
+    public static function getDescription($value, string $default = null)
     {
-        $value = static::getValueWithDescriptions()[$value] ?? null;
-
-        return $value;
+        return static::getValueWithDescriptions()[$value] ?? $default;
     }
 
     /**
