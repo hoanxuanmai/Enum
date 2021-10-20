@@ -8,6 +8,8 @@
 namespace HXM\Enum\Abstracts;
 
 
+use HXM\Enum\EnumCast;
+use HXM\Enum\EnumRule;
 use Illuminate\Support\Collection;
 
 class EnumBase
@@ -136,5 +138,24 @@ class EnumBase
         }
 
         return null;
+    }
+
+
+    /**
+     * @return EnumRule
+     * @throws \ReflectionException
+     */
+    static function getRule()
+    {
+        return new EnumRule(static::getValues());
+    }
+
+    /**
+     * @return EnumCast
+     * @throws \ReflectionException
+     */
+    static function getCast()
+    {
+        return new EnumCast(static::getValueWithDescriptions());
     }
 }

@@ -1,8 +1,16 @@
 {
   "name": "hxm/enum",
-  "description": "Enum package",
+  "description": "Enum package, simple, extensible and powerful enumeration implementation for Laravel.",
   "type": "php",
   "license": "MIT",
+  "keywords": [
+    "hxm",
+    "enum",
+    "laravel",
+    "package",
+    "validation",
+    "rule"
+  ],
   "autoload": {
     "psr-4": {
       "HXM\\Enum\\": "src/"
@@ -10,7 +18,8 @@
   },
   "require": {
     "php": ">=7",
-    "illuminate/collection": "^7.0.0"
+    "illuminate/collection": "^7.0.0",
+    "illuminate/contracts": "*"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
