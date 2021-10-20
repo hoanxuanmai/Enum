@@ -57,7 +57,7 @@ class ExampleClass extends Model
 {
   protected $casts = [
           ....
-          'attribute' => ExampleEnums::getCast(),
+          'attribute' => ExampleEnums::class,
           ...
       ];
 }

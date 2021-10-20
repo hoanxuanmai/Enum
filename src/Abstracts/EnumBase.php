@@ -11,8 +11,9 @@ namespace HXM\Enum\Abstracts;
 use HXM\Enum\EnumCast;
 use HXM\Enum\EnumRule;
 use Illuminate\Support\Collection;
+use Illuminate\Contracts\Database\Eloquent\Castable;
 
-class EnumBase
+class EnumBase implements Castable
 {
     private static  $cacheValueWithDescriptions = [];
 
@@ -153,7 +154,7 @@ class EnumBase
      * @return EnumCast
      * @throws \ReflectionException
      */
-    static function getCast()
+    public static function castUsing()
     {
         return new EnumCast(static::getValueWithDescriptions());
     }

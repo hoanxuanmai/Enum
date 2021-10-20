@@ -16,7 +16,7 @@ class EnumCast implements CastsAttributes
 
     public $valueWithDescription;
 
-    public function __construct(array $valueWithDescription)
+    public function __construct(Collection $valueWithDescription)
     {
         $this->valueWithDescription = $valueWithDescription;
     }
