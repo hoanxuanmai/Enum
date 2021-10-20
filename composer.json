@@ -18,8 +18,7 @@
   },
   "require": {
     "php": ">=7",
-    "illuminate/collection": "*",
-    "illuminate/contracts": "*"
+    "laravel/framework": "^5"
   },
   "version": "1.0.2"
 }
