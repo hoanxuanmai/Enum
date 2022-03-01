@@ -32,15 +32,21 @@ class EnumBase implements Castable
     }
 
     /**
-     * @param array $dataAppend
+     * @param callable|array|null $dataAppend
      * @return Collection
      * @throws \ReflectionException
      */
-    static function getCollection(array $dataAppend = []): Collection
+    static function getCollection($dataAppend = null): Collection
     {
         return self::getValueWithDescriptions()->mapWithKeys(function ($dt, $k) use ($dataAppend) {
 
-            return [$k => new EnumItemBase($k, $dt, $dataAppend[$k] ?? [])];
+            if (is_callable($dataAppend)) {
+                $data = $dataAppend($dt, $k);
+            } elseif (is_array($dataAppend)) {
+                $data = $dataAppend[$k] ?? [];
+            }
+
+            return [$k => new EnumItemBase($k, $dt, $data ??  [])];
 
         });
 

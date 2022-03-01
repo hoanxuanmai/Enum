@@ -7,7 +7,9 @@
 
 namespace HXM\Enum\Abstracts;
 
-class EnumItemBase
+use Illuminate\Contracts\Support\Arrayable;
+
+class EnumItemBase implements  Arrayable
 {
     public $value = null;
     public $description = null;
