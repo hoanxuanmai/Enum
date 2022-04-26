@@ -157,10 +157,11 @@ class EnumBase implements Castable
     }
 
     /**
+     * @param $arguments
      * @return EnumCast
      * @throws \ReflectionException
      */
-    public static function castUsing()
+    public static function castUsing(array $arguments = [])
     {
         return new EnumCast(static::getValueWithDescriptions());
     }
