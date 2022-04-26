@@ -20,5 +20,5 @@
     "php": ">=7",
     "laravel/framework": ">=5"
   },
-  "version": "1.0.3"
+  "version": "1.0.4"
 }
